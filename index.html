@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Report Form</title>
+  <link rel="stylesheet" href="./report.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <div class="container">
+    <h2>📋 Daily Work Report</h2>
+    <form action="./report.php" method="POST">
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Date of Allocation</th>
+              <th>Nature of Work</th>
+              <th>Person in Charge</th>
+              <th>Work Update / Stage</th>
+              <th>What is Pending</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="date" name="date" required></td>
+              <td><input type="text" name="nature" placeholder="e.g. Plumbing" required></td>
+              <td><input type="text" name="person" placeholder="e.g. John Doe" required></td>
+              <td><textarea name="update" placeholder="e.g. Completed up to floor 2" required></textarea></td>
+              <td><textarea name="pending" placeholder="e.g. Awaiting materials" required></textarea></td>
+              <td>
+                <select name="status" required>
+                  <option value="">--Select--</option>
+                  <option value="Not Started">Not Started</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Completed">Completed</option>
+                  <option value="On Hold">On Hold</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="submit">🚀 Send Report</button>
+    </form>
+  </div>
+</body>
+</html>
